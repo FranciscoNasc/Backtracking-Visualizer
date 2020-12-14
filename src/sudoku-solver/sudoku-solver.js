@@ -53,12 +53,9 @@ class SudokuSolver extends React.Component {
 
     resetBoard(){
 
-        console.log("aaabbb");
         let slv = new Solver();
 
         let aux = slv.getRandomSetUp();
-
-        console.log(aux);
 
         let markaux = aux.map(x => x === 0 ? true: false);
         let colTemp =  slv.getCols(aux);
@@ -77,7 +74,6 @@ class SudokuSolver extends React.Component {
             delayTime: 100,
             isCustom: false,
         }
-        console.log(this.state.board);
     }
 
     getNewBoard(custom){
@@ -110,7 +106,6 @@ class SudokuSolver extends React.Component {
     }
 
     handleDelayChange = (delay) => {
-        console.log(delay);
         if(delay === "")
             delay = 0
         this.setState({delayTime: delay});
@@ -201,8 +196,7 @@ class SudokuSolver extends React.Component {
     solveY(){
         if(this.solve(0, 0)) // handle the failure scenarios
             console.log(this.state.steps.length);
-        else    
-            console.log("n foi");
+
         let boardtemp = this.state.board;
         for(let i = 0; i < 81; i++){
             if(this.state.mark[i])
@@ -234,8 +228,6 @@ class SudokuSolver extends React.Component {
 
     handleChange = (i , e) => {
 
-        console.log(e);
-
         let inpt = e%10;
 
         if(this.state.isCustom &&  inpt >= 1 && inpt <= 9 && Number.isInteger(inpt)){
@@ -256,20 +248,19 @@ class SudokuSolver extends React.Component {
             }else{
                 boardAux[i] = "";
                 this.setState({board: boardAux});
-                console.log(e)
             }
         }           
 
         if(isNaN(e)){
             var boardAux = this.state.board;
 
-            if(boardAux[i] != "")
+            if(boardAux[i] !== "")
                 boardAux[i] = boardAux[i]%10;
             this.setState({board: boardAux});
 
         }
         if(inpt >= 1 && inpt <= 9 && Number.isInteger(inpt)){
-            var boardAux = this.state.board;
+            boardAux = this.state.board;
             boardAux[i] = e%10;
             this.setState({ board : boardAux});
         }

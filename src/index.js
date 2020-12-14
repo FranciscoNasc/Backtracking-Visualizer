@@ -32,7 +32,6 @@ class Home extends React.Component {
             this.setState({icon: " close ", displayLinks: "topnav display-links"});
         else    
             this.setState({icon: " bars", displayLinks: "topnav "});       
-        console.log(this.state.displayLinks);
     }
     render(){
         return (

@@ -1,3 +1,10 @@
+
+body{
+    height: 100vh;
+    background: blueviolet;
+
+    background: linear-gradient(180deg,blueviolet, #8080ff);
+}
 .topnav {
     background-color: #333;
     overflow: hidden;

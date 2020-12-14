@@ -23,30 +23,36 @@ function SquarePredefined(props){
 
 function Square(props){
     let cssProperties = "square-chess "+props.color;
-    // console.log("square");
-    console.log(props.hasQueen);    
-    if(props.hasQueen)
-        console.log("we");
     if(props.hasQueen){
-        console.log("lk");
         return (
             <button className={cssProperties}      
-            onClick={props.onClick}
-            ><FontAwesomeIcon icon={faChessQueen}/></button>
+                onClick={props.onClick}
+            >
+                <FontAwesomeIcon icon={faChessQueen}/>
+            </button>
         )
     }else{
-        // console.log("merda")
         return (
             <button className={cssProperties}      
-            onClick={props.onClick}
+                onClick={props.onClick}
             ></button>
         )
     }
 }
 
-function SolveButton(props){
+function DelayInput(props) {
     return (
-        null
+        <div className="speed">
+            <input 
+            type="number"
+            value={props.value}
+            className="delay-input"
+            onChange={e => props.onChange(e.target.value)}
+            />
+            <span className="description">
+                Intervalo entre ações em ms
+            </span>
+        </div>
     )
 }
 
@@ -149,7 +155,7 @@ class EightQueens extends React.Component{
                     row.push(this.renderSquarePredefined(color));
                 else if(this.state.board[i][j] === 1){
                     console.log("aqui");
-                    row.push(this.renderSquare(color, i, j, true));
+                    row.push(this.renderSquare(color + " filled", i, j, true));
                 }else
                     row.push(this.renderSquare(color, i, j, false));
             }
@@ -269,7 +275,10 @@ class EightQueens extends React.Component{
                 <div className="board">
                     {this.getBoard()}
                     <div className="form-div">
-                        <button className="btn solve-button" onClick={() => this.solveAndDisplay()}>Gerar Solução</button>
+                    <button className="btn get-random-table" >Tabuleiro aleatório</button>
+                    <button className="btn custom-board" >Crie seu tabuleiro</button>
+                    <DelayInput value={this.state.delayTime} className="delay-input" onChange={(a) => this.handleDelayChange(a)}></DelayInput>
+                    <button className="btn solve-button" onClick={() => this.solveAndDisplay()}>Gerar Solução</button>
                     </div>
                 </div>
             </div>

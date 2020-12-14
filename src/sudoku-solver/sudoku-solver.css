@@ -102,39 +102,6 @@ input[type=number] {
     margin-left: 3vw; 
 }
 
-/* .solve-button{
-    width: 100%;
-}
-.delay-input{
-    width: 12%;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    text-align: center;
-}
-
-.delay-input:focus {
-    border: 3px solid #555;
-    border: 3px solid blueviolet;
-}
-
-.game{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-    min-height: 100vh;
-    background: grey;   
-
-    background-image: linear-gradient(180deg,blueviolet, #8080ff);
-
-    
-    align-items: center;
-} */
-
-
 
 @media only screen and (min-width: 431px) and (max-width: 960px){
     *{

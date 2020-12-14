@@ -37,3 +37,32 @@
     flex-wrap: wrap;
     height: 12vw;   
 }
+
+.filled{
+    color: #ff9933;
+}
+
+@media only screen and (min-width: 961px){
+
+    *{
+        font-size: 15px;
+    }
+
+    .square-chess{
+        width: 58.5px;
+        height: 58.5px;
+        font-size: 30px;    
+    }
+    .row{
+        height: 58.5px;
+    }
+    .form-div{
+        width: 100%;
+    }
+
+    /* .game{
+        width: 468px;
+        width: 100%;
+        margin: 0 auto;
+    } */
+}

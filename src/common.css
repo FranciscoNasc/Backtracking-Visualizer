@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 4vw;
+    /* font-size: 4vw; */
 }
 
 
@@ -17,7 +17,6 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    /* height: 100%; */
 
     min-height: 100vh;
     background: grey;   
@@ -72,11 +71,4 @@
 .delay-input:focus {
     border: 3px solid #555;
     border: 3px solid blueviolet;
-}
-
-
-@media only screen and (max-width: 960px){
-    .form-div{
-        width: 100vw;
-    }
 }
