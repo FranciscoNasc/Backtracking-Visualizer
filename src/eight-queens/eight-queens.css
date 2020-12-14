@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.square-chess{
+    width: 10vw;
+    height: 10vw;
+    font-size: 6vw;
+    width: 12vw;
+    height: 12vw;
+    background: white;
+    border: 0;
+    height: 100%;
+    cursor: pointer;
+    color: purple;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 5px solid black; */
+}
+
+.black{
+    background-color: black;
+    background-color: darkgrey;
+    background-color: grey;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 12vw;   
+}

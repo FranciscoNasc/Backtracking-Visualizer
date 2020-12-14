@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import SudokuSolver from './sudoku-solver/sudoku-solver'
+import EightQueens from './eight-queens/eight-queens';
 import './index.css';
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,7 +39,7 @@ class Home extends React.Component {
             <Router>
                 <div className={this.state.displayLinks}>
                     <Link to={'/#'}> Home </Link>
-                    <Link to={'/#'} className="algo"> 8 Queens </Link>
+                    <Link to={'/eightqueens'} className="algo"> 8 Queens </Link>
                     <Link to={'/sudoku'} className="algo"> Sudoku </Link>
                     <Icon icon={this.state.icon} onClick={(icon) => this.handleClick(icon)} />
 
@@ -48,6 +49,7 @@ class Home extends React.Component {
               <Switch>
                   {/* <Route path='/' component={Home} /> */}
                   <Route path='/sudoku' component={SudokuSolver} />
+                  <Route path='/eightqueens' component={EightQueens} />
               </Switch>
           </Router>
         )

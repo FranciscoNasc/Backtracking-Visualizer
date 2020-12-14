@@ -6,7 +6,6 @@
     
     flex-wrap: wrap;
     flex-direction: row;
-    /* position: sticky; */
 }
 
 .topnav a, span{
@@ -49,10 +48,28 @@
     .topnav.display-links a:not(:first-child) {
         display: block;
         width: 100vw;
+        /* animation: slide 0.5s; */
     }
 
     .close{
         animation: mymove 0.5s;
+    }
+
+    .algo{
+        transition: font-size 0.5;
+        transition: padding 0.5s;
+        animation: slide 0.5s;
+    }
+
+    @keyframes slide {
+        0% {
+            font-size: 0px;
+            padding: 0px 16px;
+        }
+        100%{
+            font-size: 17px;
+            padding: 14px 16px;
+        }
     }
 
     @keyframes mymove {

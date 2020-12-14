@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sudoku-solver.css';
+import './../common.css'
 import Solver from './Solver.js';
 
 function SquarePredefined(props) {
